@@ -18,6 +18,7 @@ body{
   text-align: center;
   border-radius: 10px;
   background-color: #333;
+  margin: 0 20px;
 }
 
 .parent{
@@ -45,4 +46,8 @@ body{
 
 .card p{
   margin: 20px 0;
+}
+
+.card h3{
+  margin-top: 10px;
 }
