@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+  color: #fff;
+}
+
+html,
+body{
+  background-color: #111;
+}
+
+.card{
+  width: 300px;
+  border: 1px solid white ;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.parent{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card img{
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 75px;
+}
+
+.card button{
+  padding: 10px;
+  background-color: aliceblue;
+  color: #111;
+  border-radius: 20px;
+  border: 1px solid aliceblue;
+  cursor: pointer;
+}
+
+.card p{
+  margin: 20px 0;
+}
