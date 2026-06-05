@@ -1,25 +1,8 @@
-import React from 'react'
-import Card from './components/Card.jsx'
-import Navbar from './components/Navbar.jsx'
-
-
-const Nigga = () => {
-
-  return (
-    <div>
-      <Navbar/>
-      <div className="card">
+function Card(){
+    return <div className = 'card'>
         <h1>Aditya's card</h1>
         <p>Hello my name is Aditya and I am a CSE undergraduate student studying in IIIT Vadodara International campus diu.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eaque dolorem aperiam quaerat cum voluptates, officiis officia blanditiis perspiciatis. Aliquid.</p>
       </div>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-    </div>
-  )
 }
-
-export default Nigga
+export default Card;
