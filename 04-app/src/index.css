@@ -19,9 +19,103 @@ body{
 }
 
 .card{
-  height: 400px;
-  width: 300px;
-  background-color: rgb(192, 184, 184);
-  border-radius: 50px;
-  
+  height: 350px;
+  width: 280px;
+  background-color: rgb(245, 241, 241);
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+ 
+.top img{
+  width: 45px;
+  height: 47px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 7px;
+}
+
+.top button{
+  align-items: center;
+  display: flex;
+  font-family: Arial;
+  border-radius: 9px;
+  padding: 2px 4px;
+  border: white 1px solid;
+  font-size: 15px;
+}
+
+.center{
+
+}
+
+
+.center h3{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.center h3 span{
+  font-size: 9px;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+
+.center h2{
+  font-size: 20px;
+}
+
+.center .tag{
+  display: flex;
+  gap: 5px;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.center .tag h4{
+  border: 1px;
+  background-color: #b0a9a9;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: Arial;
+}
+
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dadada;
+  padding: 10px 0;
+}
+
+.bottom button{
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: #111 solid;
+  background-color: #111;
+  font-family: Arial;
+  color: #dadada;
+}
+
+.bottom-left{
+  margin: 0;
+  color: #111;
+  font-family: Arial;
+}
+
+.bottom-left p{
+  font-size: 12px;
+  color: gray;
 }
