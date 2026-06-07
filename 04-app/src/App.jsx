@@ -1,6 +1,5 @@
-import React from 'react'
+
 import Card from './components/Card'
-import User from './components/User'
 
 const App = () => {
 
@@ -109,8 +108,8 @@ const App = () => {
   console.log(jobOpenings);
   return (
     <div className="parent">
-      {jobOpenings.map(function(){
-        return <Card/>
+      {jobOpenings.map(function(elem){
+        return <Card company = {elem.company}/>
       })}
     </div>
   )

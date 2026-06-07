@@ -2,7 +2,8 @@ import React from 'react'
 import { Bookmark } from "lucide-react"
 
 
-const Card = () => {
+const Card = (props) => {
+    console.log(props.company);
     return (
         <div className="card">
             <div>
@@ -11,7 +12,7 @@ const Card = () => {
                     <button><Bookmark /> Save</button>
                 </div>
                 <div className="center">
-                    <h3>Amazon <span>3 days ago</span></h3>
+                    <h3>{props.company} <span>3 days ago</span></h3>
                     <h2>Senior UI/UX designer</h2>
                     <div className="tag">
                         <h4>Part Time</h4>
