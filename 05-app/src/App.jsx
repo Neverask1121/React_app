@@ -1,9 +1,12 @@
 import React from 'react'
+import Button from './components/button/Button'
+import Header from './components/Header/Header'
 
 const App = () => {
   return (
     <div>
-      Text
+      <Header/>
+      <Button/>
     </div>
   )
 }
