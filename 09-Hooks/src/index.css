@@ -1,6 +1,6 @@
 *{
   margin: 0;
-  padding: 0;
+  padding: 10px 10px;
   box-sizing: border-box;
   font-family: 'helvetica neue';
 }
@@ -9,4 +9,34 @@ html,
 body{
   height: 100%;
   width: 100%;
+}
+
+
+button{
+  margin: 1px;
+  background-color: floralwhite;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  
+}
+
+h1{
+  background-color: gainsboro;
+  width: fit-content;
+  color: firebrick;
+  margin-bottom: 100px;
+  font-size: 100px;
+  padding: 10px 70px;
+  border-radius: 10px;
+}
+
+/* 2. Hover State (Mouse over) */
+.my-button:hover {
+  background-color: #0056b3; /* Darker Blue */
+}
+
+/* 3. Click State (Mouse pressed down) */
+.my-button:active {
+  background-color: #004085; /* Even Darker Blue */
 }
