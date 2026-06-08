@@ -1,13 +1,17 @@
 import React from 'react'
 
 const App = () => {
-
   return (
     <div>
-      <input onChange = {function (elem) {
-        console.log(elem.target.value);
-      } } type = "text" placeholder='Nigga type'
-      ></input>
+      <div className="puh1">
+
+      </div>
+      <div className="puh2">
+
+      </div>
+      <div className="puh3">
+        
+      </div>
     </div>
   )
 }
