@@ -1,13 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
+
 
 const App = () => {
 
-
+  const [title, settitle] = useState("");
+  const [Details, setDetails] = useState("");
+  const [Task, setTask] = useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log('Form submission success');
-  };
+    const copyTask = [...task];
 
+
+    settitle('');
+    setDetails('');
+  };
 
   return (
     <div className='h-screen lg:flex bg-amber-100'>
@@ -15,24 +22,37 @@ const App = () => {
         submitHandler(e);
       }} className='flex lg:w-1/2 justify-between items-start p-10'>
         <div className='flex font-medium gap-4 w-1/2 items-start flex-col'>
+
           <h1 className='text-3xl font-bold'>Add notes</h1>
+          {/* First input */}
           <input 
           type = 'text' 
           placeholder='Enter your tasks'
           className='px-5 py-2 w-full border-5 rounded outline-none'
+          value={title}
+          onChange={(e) => {
+            settitle(e.target.value);
+          }}
           />
 
+          {/* Second input that give the details */}
           <textarea
           type = 'text'
           placeholder='Enter your details'
           className='px-5 py-2 w-full h-32 items-start flex-row flex border-5 rounded outline-none'
+          value={Details}
+          onChange={(e) => {
+            setDetails(e.target.value);
+          }}
           />
-          <button className='bg-amber-950 w-full text-amber-50 px-5 py-2 rounded-2xl'>Add notes</button>
+
+          <button className=' cursor-pointer active:bg-gray-400 bg-amber-950 w-full text-amber-50 px-5 py-2 rounded-2xl'>Add notes</button>
+
         </div>
         <img className = 'h-52' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Anime_stub.svg/960px-Anime_stub.svg.png" alt="" />
       </form>
       <div className='lg:border-l-2 lg:w-1/2 p-10'>
-        <h1 className='text-3xl font-bold'>Your notes</h1>
+        <h1 className='text-3xl font-bold'>Recent notes</h1>
         <div className='flex flex-wrap mt-5 gap-6 overflow-auto h-full'>
           <div className='h-52 w-40 rounded-2xl bg-white'></div>
           <div className='h-52 w-40 rounded-2xl bg-white'></div>
