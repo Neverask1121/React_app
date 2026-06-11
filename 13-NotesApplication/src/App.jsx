@@ -18,6 +18,11 @@ const App = () => {
     settitle('');
     setDetails('');
   };
+  const deleteNote = (idx) => {
+    const copyTask = [...Task];
+    copyTask.splice(idx,1)
+    setTask(copyTask)
+  };
 
   return (
     <div className='h-screen lg:flex bg-amber-100'>
@@ -56,12 +61,14 @@ const App = () => {
       </form>
       <div className='lg:border-l-2 lg:w-1/2 p-10'>
         <h1 className='text-3xl font-bold'>Recent notes</h1>
-        <div className='flex flex-wrap mt-5 gap-6 overflow-auto h-full'>
+        <div className='flex flex-wrap mt-5 gap-6 overflow-auto h-[95%]'>
           {Task.map(function(elem, idx){
             return <div key={idx} className="relative h-52 w-40 rounded-xl bg-cover px-6 py-4 bg-[url('https://thumbs.dreamstime.com/b/old-grungy-note-paper-sheet-texture-background-12575306.jpg')]">
-              <h2 className= 'absolute top-5 right-5 rounded-full bg-red-500 p-1 text-xs'><X size={16} stoke={2.65}/></h2>
-              <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
-              <p className='mt-2 leading-tight font-medium text-taupe-400'>{elem.Details}</p>
+              <h2 onClick={()=>{
+                deleteNote(idx);
+              }}  className= 'cursor-pointer active:scale-95 absolute top-5 right-5 rounded-full text-white bg-red-500 p-1 text-xs'><X size={9} strokeWidth={2.65}/></h2>
+              <h3 className='leading-tight text-xl font-bold wrap-break-word'>{elem.title}</h3>
+              <p className='mt-2 leading-tight font-medium text-taupe-400 wrap-break-word'>{elem.Details}</p>
             </div>
           })}
         </div>
