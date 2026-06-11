@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { X } from 'lucide-react';
 
 
 const App = () => {
@@ -9,9 +10,11 @@ const App = () => {
   const [Task, setTask] = useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
-    const copyTask = [...task];
-
-
+    const copyTask = [...Task];
+    copyTask.push({title, Details})
+    setTask(copyTask);
+    console.log(copyTask);
+    
     settitle('');
     setDetails('');
   };
@@ -54,13 +57,13 @@ const App = () => {
       <div className='lg:border-l-2 lg:w-1/2 p-10'>
         <h1 className='text-3xl font-bold'>Recent notes</h1>
         <div className='flex flex-wrap mt-5 gap-6 overflow-auto h-full'>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
-          <div className='h-52 w-40 rounded-2xl bg-white'></div>
+          {Task.map(function(elem, idx){
+            return <div key={idx} className="relative h-52 w-40 rounded-xl bg-cover px-6 py-4 bg-[url('https://thumbs.dreamstime.com/b/old-grungy-note-paper-sheet-texture-background-12575306.jpg')]">
+              <h2 className= 'absolute top-5 right-5 rounded-full bg-red-500 p-1 text-xs'><X size={16} stoke={2.65}/></h2>
+              <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
+              <p className='mt-2 leading-tight font-medium text-taupe-400'>{elem.Details}</p>
+            </div>
+          })}
         </div>
       </div>
     </div>
