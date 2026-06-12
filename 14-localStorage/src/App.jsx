@@ -16,9 +16,11 @@ const App = () => {
     age: 18,
     College: 'IIT DIU'
   };
-  localStorage.setItem('user', user);
+  localStorage.setItem('user', JSON.stringify(user));
   console.log(user);
-
+  const userName = JSON.parse(localStorage.getItem('user'));
+  console.log(typeof(userName));
+  
 
   return (
     <div>
