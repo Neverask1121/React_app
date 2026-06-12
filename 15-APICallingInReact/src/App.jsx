@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {React, useState} from 'react'
+import {useState} from 'react'
 
 const App = () => {
   // async function getData(){
@@ -20,7 +20,7 @@ const App = () => {
 
   // Now doing the api calling using the axios is what they say
 
-  const [data, setdata] = useState("");
+  const [data, setdata] = useState([]);
 
 
   const getData = async () => {
@@ -37,9 +37,11 @@ const App = () => {
     <div>
       <h1>App here</h1>
       <button onClick={getData}>Get data</button>
-      {data.map(function(elem, idx){
-        return <h3>Hello</h3>
-      })}
+      <div>
+        {data.map(function(elem, idx){
+          return <h3>Hello, {elem.author} {idx}</h3>
+        })}
+      </div>
     </div>
   )
 }
